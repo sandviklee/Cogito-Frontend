@@ -12,6 +12,7 @@ import ProjectModal from "../components/Projects/ProjectModal";
 import ProjectCard from "../components/Projects/ProjectCard";
 import { ProjectApply } from "../lib/types";
 import { projectsApply } from "../data/projects";
+import Hamster from "../public/Test/Hamster.png";
 
 const Apply = () => {
   // TODO: Refactor with Formik
@@ -97,19 +98,18 @@ const Due = () => {
         <div className="laptop:w-[600px] w-fit tracking-wide tablet:px-2 px-3 h-full laptop:flex items-center">
           <p className="font-bold text-blue-darker tablet:leading-[30px]">
             <span className="tablet:text-[17px] text-[20px] font-normal text-blue-darkest">
-              Søknadsperioden for å bli prosjektmedlem i Cogito{" "}
+              Søknadsperioden for å bli prosjektmedlem vår 2025 i Cogito {" "}
               <span className="text-blue-default font-semibold">
-                åpner snart!
+                er nå slutt!
               </span>{" "}
-              <span className="laptop:block hidden">
-                <span className="font-semibold">
-                  Ventetiden er snart over.{" "}
-                </span>{" "}
-                I mellomtiden kan du lese mer om de tidligere prosjektene våre
-                på prosjektsiden.
-              </span>
+              Besøk prosjektsiden vår for å utforske tidligere prosjekter.
             </span>
           </p>
+          <img
+            className="tablet:w-[130px] w-[100px] str"
+            src= "/Test/Hamster.png"
+            alt="logo"
+          />
           <p className="laptop:hidden block text-[18px] pt-4 leading-7 tracking-wide text-blue-darkest">
             <span className="font-semibold">Men fortvil ikke! </span>Vi vil søke
             etter nye prosjektmedlemmer neste semester og vær på utkikk etter
