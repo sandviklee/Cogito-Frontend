@@ -1,0 +1,20 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on:
+      group: Droplet
+      labels: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Docker Container
+        env:
+          NEXT_PUBLIC_GOOGLE_API_KEY: "${{ secrets.NEXT_PUBLIC_GOOGLE_API_KEY }}"
+        run: |
+          sudo docker compose up -d --build
